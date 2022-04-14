@@ -22,8 +22,7 @@
             if (this == o) return true;
             if (!(o instanceof Author)) return  false;
             Author author = (Author) o;
-            return  Objects.equals(firstName, author.firstName);
-         && Objects.equals(lastName, author.lastName);
+            return  Objects.equals(firstName, author.firstName) && Objects.equals(lastName, author.lastName);
         }
 
         public int hashCode() {

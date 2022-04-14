@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Book {
     private final String title;
     private final Author author;
@@ -25,8 +27,7 @@ public class Book {
         if (this == o) return true;
         if (!(o instanceof Author)) return  false;
         Book book = (Book) o;
-        return  Objects.equals(title, book.title);
-        && Objects.equals(author, book.author)
+        return  Objects.equals(title, book.title) && Objects.equals(author, book.author);
     }
 
     public int hashCode() {
